@@ -35,7 +35,7 @@ modules:
       build-commands:
         - mkdir -p /app/qt5include && cp -R /usr/include/Qt* /app/qt5include # https://bugreports.qt.io/browse/PYSIDE-787
         - mkdir _build && cd _build &&
-          cmake -GNinja -j"$FLATPAK_BUILDER_N_JOBS"
+          cmake -GNinja
           -DCMAKE_INSTALL_PREFIX:PATH="$FLATPAK_DEST"
           -DCMAKE_BUILD_TYPE=RelWithDebInfo
           -DUSE_PYTHON_VERSION=3
